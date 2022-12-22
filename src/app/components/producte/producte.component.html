@@ -1,0 +1,17 @@
+<ng-container *ngIf="show">
+    <div class="modalc">
+        <div class="modalc-content">
+            <div class="modalc-header">
+                <h4 class="modalc-title">
+                    {{name}}
+                </h4>     
+            </div>
+            <div class="modalc-container">
+                <p>Descripció: {{description}}</p>
+                <p>Preu: {{price}}€</p>
+                <br/>
+                <button type="button" class="btn btn-danger" style="float: right;" (click)="show = false">Tancar</button>
+            </div>
+        </div>
+    </div>
+</ng-container>

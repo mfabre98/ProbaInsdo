@@ -1,0 +1,20 @@
+<div class="container">
+    <h4>Productes:</h4>
+    <div>
+        <table class="table table-hover">
+            <thead class="thead-default">
+                <tr>
+                    <th>Nom</th>
+                    <th>Detalls</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producte of llista">
+                    <td>{{ producte.name }}</td>
+                    <td><button type="button" class="btn btn-success" (click)="modal.mostrarModal(producte.name, producte.price, producte.description)">Més informació</button></td>                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <app-producte #modal></app-producte>
+</div>
